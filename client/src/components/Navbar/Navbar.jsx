@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StackOverFlow from "../../assets/StackOverFlow.png";
 import { FaSearch } from "react-icons/fa";
-
+import Button from "../../components/Button/Button";
 import Avatar from "../../components/Avtar/Avtar";
 function Navbar() {
   var User = null;
@@ -34,7 +34,7 @@ function Navbar() {
         ) : (
           <>
             <Link to='/' className='nav-item nav-btn'>
-              <Avatar>F</Avatar>
+              <Avatar>F </Avatar>
             </Link>
             <Button>Log Out</Button>
           </>
