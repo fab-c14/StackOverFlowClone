@@ -4,13 +4,15 @@ import StackOverFlow from "../../assets/StackOverFlow.png";
 import { FaSearch } from "react-icons/fa";
 import Button from "../../components/Button/Button";
 import Avatar from "../../components/Avtar/Avtar";
+
+import "./Navbar.css";
 function Navbar() {
   var User = null;
 
   return (
     <nav>
       <div className='navbar'>
-        <Link to='/' className='nav-item nav-btn'>
+        <Link to='/' className='nav-item nav-logo'>
           <img src={StackOverFlow} alt='logo' height={60} />
         </Link>
         <Link to='/' className='nav-item nav-btn'>
@@ -25,8 +27,9 @@ function Navbar() {
         {/* in react we don't have action in form tag */}
         <form>
           <input type='text' placeholder='Search...' />
-          <FaSearch />
+          <FaSearch className='search-icon' />
         </form>
+
         {User === null ? (
           <Link to='/Auth' className='nav-item nav-links'>
             Login
@@ -34,7 +37,7 @@ function Navbar() {
         ) : (
           <>
             <Link to='/' className='nav-item nav-btn'>
-              <Avatar>F </Avatar>
+              <Avatar> F </Avatar>
             </Link>
             <Button>Log Out</Button>
           </>
