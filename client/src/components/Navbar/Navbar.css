@@ -58,8 +58,20 @@ nav {
   border-radius: 3px;
 }
 
-.Navbar form .search-icon {
+.navbar form .search-icon {
   position: absolute;
-  left: 26px;
-  top: 0px;
+  left: 16px;
+  top: 8px;
+}
+
+.nav-links {
+  padding: 7px 13px;
+  border: solid 1px blue;
+  border-radius: 3px;
+  background-color: #e7f8fe;
+  cursor: pointer;
+}
+
+.nav-links:hover {
+  background-color: #d3e4eb;
 }

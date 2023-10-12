@@ -26,8 +26,10 @@ function Navbar() {
         </Link>
         {/* in react we don't have action in form tag */}
         <form>
-          <input type='text' placeholder='Search...' />
-          <FaSearch className='search-icon' />
+          <input type='text' placeholder='Search...'  />
+          <div className='search-icon'>
+            <FaSearch />
+          </div>
         </form>
 
         {User === null ? (
