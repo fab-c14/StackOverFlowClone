@@ -44,16 +44,18 @@ nav {
 .nav-item:hover {
   background-color: rgb(230, 230, 230);
 }
-
+.navbar form {
+  flex-grow: 1;
+  padding: 0px;
+  position: relative;
+}
 .navbar form input {
   min-width: 90%;
-  flex-grow: 1;
   margin: 0;
   padding: 8px 10px 8px 32px;
   font-size: 13px;
   border: solid 1px #0000003e;
   border-radius: 3px;
-  position: relative;
 }
 
 .navbar form .search-icon {
@@ -72,8 +74,4 @@ nav {
 
 .nav-links:hover {
   background-color: #d3e4eb;
-}
-
-.Avtar {
-  margin-right: 10px;
 }
