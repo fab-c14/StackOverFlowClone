@@ -44,12 +44,9 @@ function Navbar() {
               py='7px'
               borderRadius='50%'
               color='white'
+              
             >
-              <Link
-                to='/'
-                className=''
-                style={{ color: "blue", textDecoration: "none" }}
-              >
+              <Link to='/' style={{ color: "white", textDecoration: "none" }}>
                 F
               </Link>
             </Avatar>

@@ -11,14 +11,14 @@ const Avtar = ({
   cursor,
 }) => {
   const style = {
-    backgroundColor: backgroundColor,
+    backgroundColor: "blue",
     padding: `${px} ${py}`,
     color: color || "black",
-    borderRadius: borderRadius,
-    fontSize: fontSize,
+    borderRadius,
+    fontSize,
     textAlign: "center",
     cursor: cursor || null,
-    textDecoration:"none"
+    textDecoration: "none",
   };
   return <div style={style}>{children}</div>;
 };
