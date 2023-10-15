@@ -1,11 +1,26 @@
-import React from 'react'
+import React from "react";
 
-function Avtar() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const Avtar = ({
+  children,
+  backgroundColor,
+  px,
+  py,
+  color,
+  borderRadius,
+  fontSize,
+  cursor,
+}) => {
+  const style = {
+    backgroundColor: "blue",
+    padding: `${px} ${py}`,
+    color: color || "black",
+    borderRadius,
+    fontSize,
+    textAlign: "center",
+    cursor: cursor || null,
+    textDecoration: "none",
+  };
+  return <div style={style}>{children}</div>;
+};
 
-export default Avtar
+export default Avtar;
