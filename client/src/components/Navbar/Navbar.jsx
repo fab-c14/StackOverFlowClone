@@ -38,10 +38,26 @@ function Navbar() {
           </Link>
         ) : (
           <>
+
+            <Avatar
+              backgroundColor='#0009dff'
+              px='10px'
+              py='7px'
+              borderRadius='50%'
+              color='white'
+            >
+              <Link to='/' style={{ color: "white", textDecoration: "none" }}>
+                F
+              </Link>
+            </Avatar>
+
+            <button className='nav-item nav-links'>Log Out</button>
+
             <Link to='/' className='nav-item nav-btn'>
               <Avatar> F </Avatar>
             </Link>
             <Button>Log Out</Button>
+
           </>
         )}
       </div>
