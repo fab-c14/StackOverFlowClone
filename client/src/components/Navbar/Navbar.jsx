@@ -7,7 +7,7 @@ import Avatar from "../../components/Avtar/Avtar";
 import "./Navbar.css";
 
 function Navbar() {
-  var User = 123;
+  var User = null;
 
   return (
     <nav>
@@ -44,7 +44,6 @@ function Navbar() {
               py='7px'
               borderRadius='50%'
               color='white'
-              
             >
               <Link to='/' style={{ color: "white", textDecoration: "none" }}>
                 F
