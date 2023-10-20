@@ -56,11 +56,11 @@ nav {
   font-size: 13px;
   border: solid 1px #0000003e;
   border-radius: 3px;
+  position: relative;
 }
-
 .navbar form .search-icon {
   position: absolute;
-  left: 16px;
+  left: 15px;
   top: 8px;
 }
 
