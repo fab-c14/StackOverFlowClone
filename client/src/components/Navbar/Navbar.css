@@ -50,7 +50,7 @@ nav {
   position: relative;
 }
 .navbar form input {
-  min-width: 90%;
+  min-width: 70%;
   margin: 0;
   padding: 8px 10px 8px 32px;
   font-size: 13px;
