@@ -5,8 +5,8 @@ import Auth from "./Pages/Auth/Auth";
 function AllRoutes() {
   return (
     <Routes>
-      <Route exact path='/' element={Home} />
-      <Route exact path='/Auth' element={Auth} />
+      <Route exact path='/' element={<Home />} />
+      <Route exact path='/Auth' element={<Auth />} />
     </Routes>
   );
 }
