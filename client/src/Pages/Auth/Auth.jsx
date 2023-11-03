@@ -1,15 +1,43 @@
-import React from "react";
-
+import React, { useState } from "react";
+import icon from "../../assets/icon.png";
 function Auth() {
+  // use state variable
+  const [isSignup, setIsSignup] = useState(false);
   return (
-    <div>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sint
-        beatae possimus quos, est maxime consequuntur voluptate dignissimos,
-        eos, nesciunt alias natus deserunt odio qui eum? Quia repellat deserunt
-        quod reprehenderit autem eligendi id?
-      </h1>
-    </div>
+    <section className='auth-section'>
+      <div className='auth-container'>
+        {!isSignup && (
+          <img
+            src={icon}
+            alt='stackoverflow'
+            className='login-logo'
+            width={"30%%"}
+          />
+        )}
+        <form>
+          <label htmlFor='email'>
+            <h4> Email </h4>
+            <input type='email' name='name' id='email' />
+          </label>
+          <label htmlFor='password'>
+            <div>
+              <h4> Password </h4>
+              <h4>Forget Password</h4>
+            </div>
+            <input type='password' name='password' id='password' />
+          </label>
+          <button type='submit' className='auth-btn'>
+            {isSignup ? "Signup" : "Login"}
+          </button>
+        </form>
+        <p>
+          {isSignup ? "already have an account?" : "Don't have an account?"}
+          <button type='button' className='handle-switch-btn' onClick={handleSwitch}>
+            {isSignup ? "Login" : "Signup"}
+          </button>
+        </p>
+      </div>
+    </section>
   );
 }
 
