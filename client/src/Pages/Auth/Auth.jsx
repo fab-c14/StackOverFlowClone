@@ -1,18 +1,16 @@
-import React,{useState} from "react";
-
+import React, { useState } from "react";
+import icon from '../../assets/sta'
 function Auth() {
-
   // use state variable
-  const [isSignup,setIsSignup] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
   return (
-    <div>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sint
-        beatae possimus quos, est maxime consequuntur voluptate dignissimos,
-        eos, nesciunt alias natus deserunt odio qui eum? Quia repellat deserunt
-        quod reprehenderit autem eligendi id?
-      </h1>
-    </div>
+    <section className='auth-section'>
+      <div className='auth-container'>
+        {!isSignup && (
+          <img src={icon} alt='stackoverflow' className='login-logo' />
+        )}
+      </div>
+    </section>
   );
 }
 
