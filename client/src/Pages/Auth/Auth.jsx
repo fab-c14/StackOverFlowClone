@@ -30,6 +30,12 @@ function Auth() {
             {isSignup ? "Signup" : "Login"}
           </button>
         </form>
+        <p>
+          {isSignup ? "already have an account?" : "Don't have an account?"}
+          <button type='button' className='handle-switch-btn' onClick={handleSwitch}>
+            {isSignup ? "Login" : "Signup"}
+          </button>
+        </p>
       </div>
     </section>
   );
