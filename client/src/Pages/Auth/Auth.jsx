@@ -1,6 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 
 function Auth() {
+
+  // use state variable
+  const [isSignup,setIsSignup] = useState(false);
   return (
     <div>
       <h1>
