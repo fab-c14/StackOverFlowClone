@@ -38,14 +38,35 @@ function Auth() {
 
             {isSignup && (
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                hic atque possimus.
+                password must be at least eight
+                <br /> character, including at least 1 letter and 1 <br />
+                number.
               </p>
             )}
           </label>
+          {isSignup && (
+            <label htmlFor='check'>
+              <input type='checkbox' id='check' />
+              <p id='check'>
+                opt-in to receive ocasional <br />
+              </p>
+            </label>
+          )}
           <button type='submit' className='auth-btn'>
             {isSignup ? "Signup" : "Login"}
           </button>
+          {isSignup && (
+            <p style={{ color: "#666767", fontSize: "13px" }}>
+              by clicking sign up you agree to our
+              <span style={{ color: "#007a6" }}>
+                terms of <br />
+                service
+              </span>
+              and
+              <span> style={{ color: "#007a6" }}privacy policy</span>
+              <span style={{ color: "#007a6" }}>cookie policy</span>
+            </p>
+          )}
         </form>
         <p>
           {isSignup ? "already have an account?" : "Don't have an account?"}
