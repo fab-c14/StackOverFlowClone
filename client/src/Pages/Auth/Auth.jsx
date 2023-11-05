@@ -14,7 +14,7 @@ function Auth() {
             src={icon}
             alt='stackoverflow'
             className='login-logo'
-            width={"30%%"}
+            width={"30%"}
           />
         )}
         <form>
@@ -46,28 +46,35 @@ function Auth() {
           </label>
           {isSignup && (
             <label htmlFor='check'>
-              <input type='checkbox' id='check' />
-              <p id='check'>
-                opt-in to receive ocasional <br />
+              <input type='checkbox' name='check' id='check' />
+              <p>
+                Opt-in to receive <br /> prodcut updates, user research
+                invitations,
+                <br /> company announcements, and digests.
               </p>
             </label>
           )}
           <button type='submit' className='auth-btn'>
             {isSignup ? "Signup" : "Login"}
           </button>
+
           {isSignup && (
-            <p style={{ color: "#666767", fontSize: "13px" }}>
-              by clicking sign up you agree to our
-              <span style={{ color: "#007a6" }}>
-                terms of <br />
-                service
+            <p style={{}}>
+              By clicking "sing up", you agree to our
+              <span style={{ color: "#007ac6" }}>
+                terms of
+                <br /> service
+              </span>
+              ,
+              <span style={{ color: "#007ac6" }}>
+                priv style={{ color: "#007ac6" }}acy policy
               </span>
               and
-              <span> style={{ color: "#007a6" }}privacy policy</span>
-              <span style={{ color: "#007a6" }}>cookie policy</span>
+              <span style={{ color: "#007ac6" }}> cookie policy</span>
             </p>
           )}
         </form>
+
         <p>
           {isSignup ? "already have an account?" : "Don't have an account?"}
           <button
