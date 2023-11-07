@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import icon from "../../assets/icon.png";
+import AboutAuth from "./AboutAuth";
+import "./Auth.css";
 function Auth() {
   // use state variable
   const [isSignup, setIsSignup] = useState(false);
@@ -8,7 +10,8 @@ function Auth() {
   };
   return (
     <section className='auth-section'>
-      <div className='auth-container'>
+      {isSignup && <AboutAuth />}
+      <div className='auth-container-2'>
         {!isSignup && (
           <img
             src={icon}
@@ -30,14 +33,19 @@ function Auth() {
             <input type='email' name='name' id='email' />
           </label>
           <label htmlFor='password'>
-            <div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h4> Password </h4>
-              {!isSignup && <h4>Forget Password</h4>}
+              {!isSignup && (
+                <p style={{ color: "#007ac6", fontSize: "13px" }}>
+                  {" "}
+                  Forget Password
+                </p>
+              )}
             </div>
             <input type='password' name='password' id='password' />
 
             {isSignup && (
-              <p>
+              <p tyle={{ fontSize: "13px" }}>
                 password must be at least eight
                 <br /> character, including at least 1 letter and 1 <br />
                 number.
@@ -47,7 +55,7 @@ function Auth() {
           {isSignup && (
             <label htmlFor='check'>
               <input type='checkbox' name='check' id='check' />
-              <p>
+              <p tyle={{ fontSize: "13px" }}>
                 Opt-in to receive <br /> prodcut updates, user research
                 invitations,
                 <br /> company announcements, and digests.
@@ -59,16 +67,13 @@ function Auth() {
           </button>
 
           {isSignup && (
-            <p style={{}}>
+            <p style={{ color: "#666767", fontSize: "13px" }}>
               By clicking "sing up", you agree to our
               <span style={{ color: "#007ac6" }}>
                 terms of
                 <br /> service
               </span>
-              ,
-              <span style={{ color: "#007ac6" }}>
-                priv style={{ color: "#007ac6" }}acy policy
-              </span>
+              ,<span style={{ color: "#007ac6" }}>privacy policy</span>
               and
               <span style={{ color: "#007ac6" }}> cookie policy</span>
             </p>
