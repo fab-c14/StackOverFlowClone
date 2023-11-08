@@ -36,7 +36,7 @@
 
 .auth-container-2 form label input {
   padding: 10px;
-  width: calc(100%-30px);
+  width: calc(100%-0px);
   border: solid 1px #0000003e;
   font-size: 13px;
 }
@@ -55,4 +55,27 @@
 .auth-container-2 form label:nth-child(4) input {
   width: 15%;
   margin: 13px 0px;
+}
+
+.auth-btn {
+  margin-top: 10px;
+  padding: 10px 5px;
+  background-color: #009dff;
+  border: solid 1px #000dff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 13px;
+  font-weight: 500;
+}
+.auth-btn:hover {
+  background-color: #018ce3;
+}
+.handle-switch-btn {
+  background-color: transparent;
+  color: #0007ac;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
 }

@@ -37,7 +37,6 @@ function Auth() {
               <h4> Password </h4>
               {!isSignup && (
                 <p style={{ color: "#007ac6", fontSize: "13px" }}>
-                  {" "}
                   Forget Password
                 </p>
               )}
