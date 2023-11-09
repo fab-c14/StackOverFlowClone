@@ -17,7 +17,7 @@ function Auth() {
             src={icon}
             alt='stackoverflow'
             className='login-logo'
-            width={"30%"}
+            width={"20%"}
           />
         )}
         <form>
