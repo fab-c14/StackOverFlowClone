@@ -54,7 +54,7 @@ function Auth() {
           {isSignup && (
             <label htmlFor='check'>
               <input type='checkbox' name='check' id='check' />
-              <p tyle={{ fontSize: "13px" }}>
+              <p style={{ fontSize: "13px" }}>
                 Opt-in to receive <br /> prodcut updates, user research
                 invitations,
                 <br /> company announcements, and digests.
