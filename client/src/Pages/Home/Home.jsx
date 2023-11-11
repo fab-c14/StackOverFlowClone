@@ -1,8 +1,8 @@
 import React from "react";
+import '../../App.css';
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import RightSidebar from "../../components/RightSidebar/RightSidebar";
-import Homemainbar from "../../components/HomeMainbar/HomeMainbar";
-
+import HomeMainbar from "../../components/HomeMainbar/HomeMainbar";
 function Home() {
   return (
     <div className='home-container-1'>
