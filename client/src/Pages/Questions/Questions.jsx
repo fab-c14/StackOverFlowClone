@@ -1,9 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./HomeMainbar.css";
-
-import QuestionList from "./QuestionList";
-const HomeMainbar = () => {
+// import "./HomeMainbar.css";
+const Questions = () => {
   var questionList = [
     {
       id: 1,
@@ -58,7 +56,7 @@ const HomeMainbar = () => {
         ) : (
           <>
             <p>{questionList.length} questions</p>
-            <QuestionList questionList={questionList} />
+            
           </>
         )}
       </div>
@@ -66,4 +64,4 @@ const HomeMainbar = () => {
   );
 };
 
-export default HomeMainbar;
+export default Questions;
