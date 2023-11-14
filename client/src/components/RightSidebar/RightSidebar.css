@@ -1,8 +1,8 @@
 .right-sidebar {
-  /* margin-left: 24px; */
+  margin-left: 24px;
   float: right;
   width: 300px;
-  margin: 48px 8px 15px 24px;
+
   font-size: 15px;
 }
 
