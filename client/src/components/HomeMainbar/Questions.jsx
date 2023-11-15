@@ -23,9 +23,7 @@ const Questions = ({ question }) => {
           </div>
 
           <p className='display-time'>
-            asked
-            {question.askedOn}
-            {question.userPosted}
+            asked {question.askedOn} {question.userPosted}
           </p>
         </div>
       </div>
