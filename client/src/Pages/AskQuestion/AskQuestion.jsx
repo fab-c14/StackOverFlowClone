@@ -9,8 +9,8 @@ const AskQuestion = () => {
         <h1>Ask a public Question</h1>
         <form>
           <div className='ask-form-container'>
-            <h4>Title</h4>
             <label htmlFor='ask-ques-title'>
+              <h4>Title</h4>
               <p>Be specific and imagine you're asking another person</p>
               <input
                 type='text'
@@ -18,20 +18,21 @@ const AskQuestion = () => {
                 placeholder='is There any question ask here'
               />
             </label>
-            <h4>Body</h4>
             <label htmlFor='ask-ques-body'>
+              <h4>Body</h4>
               <p>
                 Include all information someone would need to answer your
                 question
               </p>
-              <input
-                type='text'
+              <textarea
+                name='ask-ques-body'
                 id='ask-ques-body'
-                placeholder='is There any question ask here'
-              />
+                cols='30'
+                rows='10'
+              ></textarea>
             </label>
-            <h4>Tags</h4>
             <label htmlFor='ask-ques-tags'>
+              <h4>Tags</h4>
               <p>Add up to 5 tags </p>
               <input
                 type='text'
@@ -40,7 +41,11 @@ const AskQuestion = () => {
               />
             </label>
           </div>
-          <input type='submit' value='Review Your Question' />
+          <input
+            type='submit'
+            value='Review Your Question'
+            className='review-btn'
+          />
         </form>
       </div>
     </div>
