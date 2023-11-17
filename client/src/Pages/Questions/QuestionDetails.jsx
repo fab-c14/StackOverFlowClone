@@ -1,9 +1,7 @@
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./HomeMainbar.css";
-
-import QuestionList from "./QuestionList";
-const HomeMainbar = () => {
+import { useParams } from "react-router-dom";
+import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
+const QuestionDetails = () => {
   var questionList = [
     {
       _id: 1,
@@ -68,42 +66,26 @@ const HomeMainbar = () => {
       ],
     },
   ];
-  const user = 1;
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const checkAuth = () => {
-    if (user === null) {
-      alert("login or signup to ask a question.");
-      navigate("/Auth");
-    } else {
-      navigate("/AskQuestion");
-    }
-  };
+  const { id } = useParams();
   return (
-    <div className='main-bar'>
-      <div className='main-bar-header'>
-        {location.pathname === "/" ? (
-          <h1>Top Questions</h1>
-        ) : (
-          <h1>All Questions</h1>
-        )}
-        <button onClick={checkAuth} className='ask-btn'>
-          Ask Question
-        </button>
-      </div>
-      <div>
-        {questionList === null ? (
-          <h1>Loading...</h1>
-        ) : (
-          <>
-            <p>{questionList.length} questions</p>
-            <QuestionList questionList={questionList} />
-          </>
-        )}
-      </div>
+    <div className='question-details-page'>
+      {questionList === null ? (
+        <h1>Loading...</h1>
+      ) : (
+        <>
+          {questionList
+            .filter((question) => question._id === id)
+            .map((question) => (
+              <div key={question._id}>
+                <section className='question-details-container'>
+                  <h1>{question.questionTitle}</h1>
+                  <div className='question-details-container-2'></div>
+                </section>
+              </div>
+            ))}
+        </>
+      )}
     </div>
   );
 };
-
-export default HomeMainbar;
+export default QuestionDetails;
