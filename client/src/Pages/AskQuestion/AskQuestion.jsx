@@ -1,8 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import "./AskQuestion.css";
 const AskQuestion = () => {
-  const user = null;
   return (
     <div className='ask-question'>
       <div className='ask-ques-container'>
