@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import StackOverFlow from "../../assets/StackOverFlow.png";
 import { FaSearch } from "react-icons/fa";
 
-import Avatar from "../Avtar/Avatar";
+import Avatar from "../Avatar/Avatar";
 
 import "./Navbar.css";
 function Navbar() {
