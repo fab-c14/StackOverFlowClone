@@ -86,9 +86,9 @@ const QuestionDetails = () => {
                   <h1>{question.questionTitle}</h1>
                   <div className='question-details-container-2'>
                     <div className='question-votes'>
-                      <FaThumbsUp width='18' />
+                      <FaThumbsUp width='18' className='votes-icon' />
                       <p>{question.upVotes - question.downVotes}</p>
-                      <FaThumbsDown width='18' />
+                      <FaThumbsDown width='18' className='votes-icon' />
                     </div>
                     <div style={{ width: "100%" }}>
                       <p className='question-body'>{question.questionBody}</p>
@@ -149,7 +149,8 @@ const QuestionDetails = () => {
                       <Link
                         to='/Tags'
                         key={tag}
-                        className='ans-tags'  style={{ textDecoration: "none", color: "#009dff" }}
+                        className='ans-tags'
+                        style={{ textDecoration: "none", color: "#009dff" }}
                       >
                         {tag}
                       </Link>
