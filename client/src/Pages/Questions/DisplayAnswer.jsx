@@ -2,6 +2,7 @@ import React from "react";
 import QuestionDetails from "./QuestionDetails";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar/Avatar";
+import "./Questions.css";
 const DisplayAnswer = ({ id, question }) => {
   return (
     <div>
