@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
+import { IoCaretUp, IoCaretDown } from "react-icons/io5";
 import "./Questions.css";
 import Avatar from "../../components/Avatar/Avatar";
 import DisplayAnswer from "./DisplayAnswer";
@@ -86,9 +86,9 @@ const QuestionDetails = () => {
                   <h1>{question.questionTitle}</h1>
                   <div className='question-details-container-2'>
                     <div className='question-votes'>
-                      <FaThumbsUp width='18' className='votes-icon' />
+                      <IoCaretUp width='18' className='votes-icon' />
                       <p>{question.upVotes - question.downVotes}</p>
-                      <FaThumbsDown width='18' className='votes-icon' />
+                      <IoCaretDown width='18' className='votes-icon' />
                     </div>
                     <div style={{ width: "100%" }}>
                       <p className='question-body'>{question.questionBody}</p>

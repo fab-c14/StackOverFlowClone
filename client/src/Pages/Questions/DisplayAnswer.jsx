@@ -9,7 +9,7 @@ const DisplayAnswer = ({ id, question }) => {
       {question.answer.map((ans) => (
         <div className='display-ans' key={ans._id}>
           <p>{ans.answerBody}</p>
-          <div className='question-actions'>
+          <div className='question-actions-user'>
             <div>
               <button type='button'>Share</button>
               <button type='button'>Delete</button>
