@@ -14,4 +14,14 @@ app.get("/", (req, res) => {
   res.send("This is a Stack OverFlow clone Api");
 });
 const PORT = process.env.PORT || 5000;
-// we are going to use mongo db atlas
+// we are going to use mongo db atlas - atlas is set up now we need to configure here
+const CONNECTION_URL =
+  "mongodb+srv://faisal:faisal@stack-overflow-clone.8tphoua.mongodb.net/?retryWrites=true&w=majority";
+mongoose
+  .connect(CONNECTION_URL, { useNewUrlParser: true, useUinfiedTopology: true })
+  .then(() =>
+    app.listen(PORT, () => {
+      console.log(`server running on port ${PORT}`);
+    })
+  )
+  .then((err) => console.log(err.message));
