@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import icon from "../../assets/icon.png";
 import AboutAuth from "./AboutAuth";
+import { signup, login } from "../../actions/auth";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./Auth.css";
 function Auth() {
   // use state variable
@@ -8,7 +11,8 @@ function Auth() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSwitch = () => {
     setIsSignup(!isSignup);
   };
@@ -22,9 +26,12 @@ function Auth() {
       if (!name) {
         alert("Enter a Name to continue");
       }
+      dispatch(signup({ name, email, password }), navigate);
+    } else {
+      dispatch(login({ email, password }), navigate);
     }
-    console.log({name,email,password})
   };
+
   return (
     <section className='auth-section'>
       {isSignup && <AboutAuth />}
