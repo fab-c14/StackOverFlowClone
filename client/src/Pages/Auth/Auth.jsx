@@ -26,9 +26,9 @@ function Auth() {
       if (!name) {
         alert("Enter a Name to continue");
       }
-      dispatch(signup({ name, email, password }), navigate);
+      dispatch(signup({ name, email, password }, navigate));
     } else {
-      dispatch(login({ email, password }), navigate);
+      dispatch(login({ email, password }, navigate));
     }
   };
 
