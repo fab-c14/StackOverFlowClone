@@ -8,7 +8,7 @@ const Questions = () => {
       votes: 3,
       noOfAnswers: 2,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+  
       questionTags: ["java", "node js", "react js", "mongo db"],
       userPosted: "faisal",
       askedOn: "jan 1",
@@ -19,7 +19,7 @@ const Questions = () => {
       votes: 0,
       noOfAnswers: 0,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+  
       questionTags: ["js", "R", "python"],
       userPosted: "faisal",
       askedOn: "jan 1",
@@ -30,7 +30,7 @@ const Questions = () => {
       votes: 1,
       noOfAnswers: 0,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+    
       questionTags: ["javascript", "R", "python"],
       userPosted: "faisal",
       askedOn: "jan 1",

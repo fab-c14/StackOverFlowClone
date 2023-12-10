@@ -32,9 +32,6 @@
   color: rgba(206, 203, 203);
 }
 
-.votes-icon::active {
-  color: #ef8236;
-}
 
 .question-details-container .question-body {
   line-height: 22px;
@@ -127,4 +124,14 @@
   font-size: 14px;
   line-height: 18px;
   white-space: pre-line;
+}
+
+
+.votes-icon:active {
+  color: #ef8236;
+}
+.question-details-container {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-radius: 1px solid rgba(0, 0, 8, 112);
 }

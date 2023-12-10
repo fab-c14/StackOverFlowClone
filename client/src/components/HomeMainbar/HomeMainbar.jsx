@@ -11,7 +11,7 @@ const HomeMainbar = () => {
       downVotes: 2,
       noOfAnswers: 2,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+ 
       questionTags: ["java", "node js", "react js", "mongo db"],
       userPosted: "faisal",
       askedOn: "jan 1",
@@ -32,7 +32,7 @@ const HomeMainbar = () => {
       downVotes: 2,
       noOfAnswers: 0,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+
       questionTags: ["js", "R", "python"],
       userPosted: "faisal",
       askedOn: "jan 1",
@@ -53,7 +53,7 @@ const HomeMainbar = () => {
       downVotes: 2,
       noOfAnswers: 0,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+
       questionTags: ["javascript", "R", "python"],
       userPosted: "faisal",
       askedOn: "jan 1",

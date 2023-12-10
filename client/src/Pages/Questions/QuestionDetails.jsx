@@ -12,7 +12,7 @@ const QuestionDetails = () => {
       downVotes: 2,
       noOfAnswers: 2,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+   
       questionTags: ["java", "node js", "react js", "mongo db"],
       userPosted: "faisal",
       askedOn: "jan 1",
@@ -33,7 +33,7 @@ const QuestionDetails = () => {
       downVotes: 2,
       noOfAnswers: 0,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
+
       questionTags: ["js", "R", "python"],
       userPosted: "faisal",
       askedOn: "jan 1",
@@ -54,7 +54,6 @@ const QuestionDetails = () => {
       downVotes: 2,
       noOfAnswers: 0,
       questionTitle: "what is function?",
-      questionTags: "It meant to be",
       questionTags: ["javascript", "R", "python"],
       userPosted: "faisal",
       askedOn: "jan 1",
@@ -74,14 +73,14 @@ const QuestionDetails = () => {
   return (
     <div className='question-details-page'>
       {questionList === null ? (
-        <h1>Loading...</h1>
+        <h1 key={questionList.id}>Loading...</h1>
       ) : (
         <>
           {questionList
             .filter((question) => question._id === id)
             .map((question) => (
               <div key={question._id}>
-                {console.log(question)}
+          
                 <section className='question-details-container'>
                   <h1>{question.questionTitle}</h1>
                   <div className='question-details-container-2'>

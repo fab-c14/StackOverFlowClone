@@ -7,6 +7,7 @@ function App() {
     <div className='App'>
       <Router>
         <Navbar />
+        {console.log("hello world")}
         <AllRoutes />
       </Router>
     </div>
