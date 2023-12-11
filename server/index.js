@@ -5,6 +5,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import userRoutes from "./routes/users.js"; // use .js here
+import questionRoutes from './routes/Questions.js'
 const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
@@ -15,7 +16,7 @@ app.get("/", (req, res) => {
   res.send("This is a Stack OverFlow clone Api");
 });
 app.use("/user", userRoutes); //if url is /user then userRoutes will be used as middleware
-
+app.use('/questions',questionRoutes)
 // app.post("auth/signup", () => {
 //   // function to do signup
 //   // but we don't do like this
