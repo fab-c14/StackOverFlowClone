@@ -1,8 +1,8 @@
-import React,{useState} from "react";
+import {useState} from "react";
 import {useDispatch,useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import "./AskQuestion.css";
-import {askQuestion} from '../../actions/question'
+import {askQuestion} from '../../actions/question.js'
 const AskQuestion = () => {
   const [questionTitle,setQuestionTitle] = useState('');
   const [questionBody,setQuestionBody] = useState('');
@@ -12,16 +12,16 @@ const AskQuestion = () => {
   const navigate = useNavigate()
 
   const handleSubmit = (e) =>{
-    e.prevenDefault();
-    // console.log({questionTitle,questionBody,questionTags})
+    e.preventDefault();
     dispatch(askQuestion({questionTitle,questionBody,questionTags,userPosted:User.result.name},navigate))
   }
   const handleEnter = (e)=>{
     if (e.key === 'Enter'){
-      setQuestionBody(questionBody + '\n')
+      setQuestionBody(questionBody + "\n")
     }
   }
   return (
+
     <div className='ask-question'>
       <div className='ask-ques-container'>
         <h1>Ask a public Question</h1>
@@ -49,7 +49,7 @@ const AskQuestion = () => {
                 cols='30'
                 rows='10'
                 onChange={(e)=>{setQuestionBody(e.target.value)}}
-                onKeyDown={handleEnter}
+                onKeyPress={handleEnter}
               ></textarea>
             </label>
             <label htmlFor='ask-ques-tags'>
@@ -59,7 +59,7 @@ const AskQuestion = () => {
                 type='text'
                 id='ask-ques-tags'
                 placeholder='type in your tags here'
-                onChange={(e)=>{setQuestionTags(e.target.value.split())}}
+                onChange={(e)=>{setQuestionTags(e.target.value.split(" "))}}
               />
             </label>
           </div>
