@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 });
 app.use("/user", userRoutes); //if url is /user then userRoutes will be used as middleware
 app.use('/questions',questionRoutes)
+
 // app.post("auth/signup", () => {
 //   // function to do signup
 //   // but we don't do like this

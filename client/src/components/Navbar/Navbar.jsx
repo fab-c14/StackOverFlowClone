@@ -4,7 +4,6 @@ import StackOverFlow from "../../assets/StackOverFlow.png";
 import { FaSearch } from "react-icons/fa";
 import {useSelector,useDispatch} from 'react-redux';
 import Avatar from "../Avatar/Avatar";
-// import currentUserReducer from "../../reducers/currentUser";
 
 import "./Navbar.css";
 import { setCurrentUser } from "../../actions/currentUser";
