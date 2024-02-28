@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Questions = () => {
 
   const questionsList = useSelector(state=>state.questionsReducer)
-
+  console.log(questionsList.data)
   const location = useLocation();
   return (
     <div className='main-bar'>
