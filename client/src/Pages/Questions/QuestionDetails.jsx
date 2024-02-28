@@ -4,79 +4,19 @@ import { IoCaretUp, IoCaretDown } from "react-icons/io5";
 import "./Questions.css";
 import Avatar from "../../components/Avatar/Avatar";
 import DisplayAnswer from "./DisplayAnswer";
+import { useSelector } from "react-redux";
 const QuestionDetails = () => {
-  var questionList = [
-    {
-      _id: "1",
-      upVotes: 3,
-      downVotes: 2,
-      noOfAnswers: 2,
-      questionTitle: "what is function?",
-   
-      questionTags: ["java", "node js", "react js", "mongo db"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-      userId: 1,
-      answer: [
-        {
-          answerBody: "Answer",
-          userAnswered: "kumar",
-          answeredOn: "jan 2",
-          userId: 2,
-        },
-      ],
-    },
-
-    {
-      _id: "2",
-      upVotes: 3,
-      downVotes: 2,
-      noOfAnswers: 0,
-      questionTitle: "what is function?",
-
-      questionTags: ["js", "R", "python"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-      userId: 1,
-      answer: [
-        {
-          answerBody: "Answer",
-          userAnswered: "kumar",
-          answeredOn: "jan 2",
-          userId: 2,
-        },
-      ],
-    },
-
-    {
-      _id: "3",
-      upVotes: 3,
-      downVotes: 2,
-      noOfAnswers: 0,
-      questionTitle: "what is function?",
-      questionTags: ["javascript", "R", "python"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-      userId: 1,
-      answer: [
-        {
-          answerBody: "Answer",
-          userAnswered: "kumar",
-          answeredOn: "jan 2",
-          userId: 2,
-        },
-      ],
-    },
-  ];
+  
   const { id } = useParams();
-
+  const questionsList = useSelector(state=>state.questionsReducer)
+  console.log(questionsList)
   return (
     <div className='question-details-page'>
-      {questionList === null ? (
-        <h1 key={questionList.id}>Loading...</h1>
+      {questionsList.data === null ? (
+        <h1 key={questionsList.data._id}>Loading...</h1>
       ) : (
         <>
-          {questionList
+          {questionsList.data
             .filter((question) => question._id === id)
             .map((question) => (
               <div key={question._id}>
