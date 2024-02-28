@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://5000-fabc14-stackoverflowclo-jy7f1sdyfgv.ws-us108.gitpod.io/" });
+const API = axios.create({ baseURL: "https://5000-fabc14-stackoverflowclo-jjsm49xnt6l.ws-us108.gitpod.io" });
 
 export const signUp = (authData) => API.post("/user/signup", authData);
 export const logIn = (authData) => API.post("/user/login", authData);
