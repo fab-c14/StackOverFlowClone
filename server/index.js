@@ -4,6 +4,7 @@ import express from "express";
 // const express = require('express') // but we have used import here
 import mongoose from "mongoose";
 import cors from "cors";
+import answerRoutes from './routes/Answers.js'
 import userRoutes from "./routes/users.js"; // use .js here
 import questionRoutes from './routes/Questions.js'
 const app = express();
@@ -17,7 +18,7 @@ app.get("/", (req, res) => {
 });
 app.use("/user", userRoutes); //if url is /user then userRoutes will be used as middleware
 app.use('/questions',questionRoutes)
-
+app.use('/answer',answerRoutes)
 // app.post("auth/signup", () => {
 //   // function to do signup
 //   // but we don't do like this
