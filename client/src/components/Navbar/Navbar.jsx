@@ -8,7 +8,7 @@ import Avatar from "../Avatar/Avatar";
 import "./Navbar.css";
 import { setCurrentUser } from "../../actions/currentUser";
 function Navbar() {
-  var User = useSelector((state) => (state.currentUserReducer))
+  var User = useSelector(state => state.currentUserReducer)
  
   const dispatch = useDispatch()
   useEffect(()=>{
@@ -53,7 +53,7 @@ function Navbar() {
                 to='/User'
                 style={{ textDecoration: "none", color: "white" }}
               >
-                F
+                {User.result.name.charAt(0).toUpperCase()}
               </Link>
             </Avatar>
 

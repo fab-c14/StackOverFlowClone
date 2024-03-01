@@ -1,17 +1,37 @@
-import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
+import { useParams, Link,useNavigate } from "react-router-dom";
 import { IoCaretUp, IoCaretDown } from "react-icons/io5";
 import "./Questions.css";
 import Avatar from "../../components/Avatar/Avatar";
 import DisplayAnswer from "./DisplayAnswer";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { postAnswer } from "../../actions/question";
 
 const QuestionDetails = () => {
   const { id } = useParams();
   const questionsList = useSelector(state => state.questionsReducer);
-
+  const Navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [Answer,setAnswer] = useState('');
   if (!questionsList.data) {
     return <h1>Loading...</h1>;
+  }
+  const User = useSelector(state=>state.currentUserReducer);
+  const handlePostAns = (e,answerLength)=>{
+    e.preventDefault();
+    if(User===null){
+      alert("Login or Singup To Answer A Question")
+      Navigate('/Auth')
+    }
+    else{
+      if(Answer ===''){
+        alert('Enter An Answer Before Submitting')
+      }
+      else{
+        dispatch(postAnswer({id,noOfAnswers:answerLength+1,answerBody:Answer,userAnswered:User.result.name}))
+
+      }
+    }
   }
 
   const question = questionsList.data.find(question => question._id === id);
@@ -76,13 +96,14 @@ const QuestionDetails = () => {
       )}
       <section className="post-ans-container">
         <h3>Your Answer</h3>
-        <form>
+        <form onSubmit={(e)=>{handlePostAns(e,question.answer.length)}}>
           <textarea
             placeholder="Type your answer here"
             name=""
             id=""
             cols="30"
             rows="10"
+            onChange={e=>setAnswer(e.target.value)}
           />
           <br />
           <input
