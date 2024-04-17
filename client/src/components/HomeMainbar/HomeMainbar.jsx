@@ -3,75 +3,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./HomeMainbar.css";
 
 import QuestionList from "./QuestionList";
+import { useSelector } from "react-redux";
 const HomeMainbar = () => {
-  var questionList = [
-    {
-      _id: 1,
-      upVotes: 3,
-      downVotes: 2,
-      noOfAnswers: 2,
-      questionTitle: "what is function?",
-      questionTags: "It meant to be",
-      questionTags: ["java", "node js", "react js", "mongo db"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-      userId: 1,
-      answer: [
-        {
-          answerBody: "Answer",
-          userAnswered: "kumar",
-          answeredOn: "jan 2",
-          userId: 2,
-        },
-      ],
-    },
 
-    {
-      _id: 2,
-      upVotes: 3,
-      downVotes: 2,
-      noOfAnswers: 0,
-      questionTitle: "what is function?",
-      questionTags: "It meant to be",
-      questionTags: ["js", "R", "python"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-      userId: 1,
-      answer: [
-        {
-          answerBody: "Answer",
-          userAnswered: "kumar",
-          answeredOn: "jan 2",
-          userId: 2,
-        },
-      ],
-    },
-
-    {
-      _id: 3,
-      upVotes: 3,
-      downVotes: 2,
-      noOfAnswers: 0,
-      questionTitle: "what is function?",
-      questionTags: "It meant to be",
-      questionTags: ["javascript", "R", "python"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-      userId: 1,
-      answer: [
-        {
-          answerBody: "Answer",
-          userAnswered: "kumar",
-          answeredOn: "jan 2",
-          userId: 2,
-        },
-      ],
-    },
-  ];
   const user = 1;
   const location = useLocation();
   const navigate = useNavigate();
-
+  const questionsList = useSelector(state=>state.questionsReducer)
+  // console.log(questionsList)
   const checkAuth = () => {
     if (user === null) {
       alert("login or signup to ask a question.");
@@ -93,12 +32,12 @@ const HomeMainbar = () => {
         </button>
       </div>
       <div>
-        {questionList === null ? (
+        {questionsList.data === null ? (
           <h1>Loading...</h1>
         ) : (
           <>
-            <p>{questionList.length} questions</p>
-            <QuestionList questionList={questionList} />
+            <p>{questionsList.data.length} questions</p>
+            <QuestionList questionsList={questionsList.data} />
           </>
         )}
       </div>

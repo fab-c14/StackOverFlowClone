@@ -9,12 +9,12 @@ function Widget() {
       <h4>The Overflow Blog</h4>
       <div className='right-sidebar-div-1'>
         <div className='right-sidebar-div-2'>
-          <FaPen width='18' />
+          <FaPen />
           <p>Observability is key to future of software your devops career</p>
         </div>
 
         <div className='right-sidebar-div-2'>
-          <FaPen width='18' />
+          <FaPen  />
           <p>Padcast 374 : how valueable is your screen.</p>
         </div>
       </div>
@@ -22,7 +22,7 @@ function Widget() {
       <h4>Feature On Meta</h4>
       <div className='right-sidebar-div-1'>
         <div className='right-sidebar-div-2'>
-          <FaComment width='18' />
+          <FaComment  />
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
             totam magni saepe.
@@ -30,7 +30,7 @@ function Widget() {
         </div>
 
         <div className='right-sidebar-div-2'>
-          <FaComment width='18' />
+          <FaComment  />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Voluptatibus molestiae perspiciatis ab?
@@ -38,7 +38,7 @@ function Widget() {
         </div>
 
         <div className='right-sidebar-div-2'>
-          <FaStackOverflow width='18' />
+          <FaStackOverflow />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eum
             ullam autem quos?

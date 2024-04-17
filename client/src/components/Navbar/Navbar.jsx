@@ -1,14 +1,19 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import StackOverFlow from "../../assets/StackOverFlow.png";
 import { FaSearch } from "react-icons/fa";
-
+import {useSelector,useDispatch} from 'react-redux';
 import Avatar from "../Avatar/Avatar";
 
 import "./Navbar.css";
+import { setCurrentUser } from "../../actions/currentUser";
 function Navbar() {
-  var User = null;
-
+  var User = useSelector(state => state.currentUserReducer)
+ 
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
+  },[dispatch])
   return (
     <nav className='main-nav'>
       <div className='navbar'>
@@ -48,7 +53,7 @@ function Navbar() {
                 to='/User'
                 style={{ textDecoration: "none", color: "white" }}
               >
-                F
+                {User.result.name.charAt(0).toUpperCase()}
               </Link>
             </Avatar>
 

@@ -2,41 +2,9 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 // import "./HomeMainbar.css";
 const Questions = () => {
-  var questionList = [
-    {
-      id: 1,
-      votes: 3,
-      noOfAnswers: 2,
-      questionTitle: "what is function?",
-      questionTags: "It meant to be",
-      questionTags: ["java", "node js", "react js", "mongo db"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-    },
 
-    {
-      id: 2,
-      votes: 0,
-      noOfAnswers: 0,
-      questionTitle: "what is function?",
-      questionTags: "It meant to be",
-      questionTags: ["js", "R", "python"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-    },
-
-    {
-      id: 3,
-      votes: 1,
-      noOfAnswers: 0,
-      questionTitle: "what is function?",
-      questionTags: "It meant to be",
-      questionTags: ["javascript", "R", "python"],
-      userPosted: "faisal",
-      askedOn: "jan 1",
-    },
-  ];
-
+  const questionsList = useSelector(state=>state.questionsReducer)
+  console.log(questionsList.data)
   const location = useLocation();
   return (
     <div className='main-bar'>
@@ -51,11 +19,11 @@ const Questions = () => {
         </Link>
       </div>
       <div>
-        {questionList === null ? (
+        {questionsList.data === null ? (
           <h1>Loading...</h1>
         ) : (
           <>
-            <p>{questionList.length} questions</p>
+            <p>{questionsList.data.length} questions</p>
             
           </>
         )}

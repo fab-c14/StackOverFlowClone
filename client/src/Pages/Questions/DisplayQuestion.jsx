@@ -6,7 +6,7 @@ const DisplayQuestion = () => {
   return (
     <div className='home-container-1'>
       <LeftSidebar />
-      <div className='home-container-3'>
+      <div className='home-container-2'>
         <QuestionDetails />
         <RightSidebar />
       </div>
