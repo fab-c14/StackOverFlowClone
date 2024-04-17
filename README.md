@@ -1,69 +1,87 @@
+# StackOverFlowClone
 
-## Available Scripts
+A Stack Overflow clone built with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/), utilizing [MongoDB](https://www.mongodb.com/) for the database. This project aims to replicate the core functionalities of Stack Overflow, allowing users to ask questions, provide answers, and upvote or downvote both questions and answers.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+- **User Authentication:** Users can sign up, log in, and log out securely. Authentication is implemented using JWT (JSON Web Tokens).
+- **Ask Questions:** Authenticated users can post questions on various topics.
+- **Answer Questions:** Users can answer questions posted by others.
+- **Upvote and Downvote:** Users can upvote or downvote both questions and answers.
+- **Search Functionality:** Search for questions based on keywords or topics.
+- **Tagging System:** Questions can be tagged with relevant topics for better organization and searchability.
+- **Markdown Support:** Both questions and answers support Markdown formatting for rich text editing.
+- **Responsive Design:** The application is designed to be responsive, providing a seamless experience across devices.
 
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/fab-c14/StackOverFlowClone.git
+    ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd StackOverFlowClone
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies for both the client and server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    # Install server dependencies
+    cd server
+    npm install
 
-### `npm run eject`
+    # Install client dependencies
+    cd ../client
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Set up the MongoDB database:
+    - Install MongoDB if not already installed.
+    - Create a new MongoDB database and obtain the connection URI.
+    - Create a `.env` file in the `server` directory and add the following:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```plaintext
+    MONGODB_URI=your_mongodb_connection_uri
+    JWT_SECRET=your_jwt_secret
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Run the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    # From the server directory
+    npm start
 
-## Learn More
+    # From the client directory
+    npm start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. Access the application in your browser at `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+- Register for a new account or log in with existing credentials.
+- Ask questions by clicking on the "Ask a Question" button.
+- Answer questions by navigating to the question page and providing your answer in the provided input field.
+- Upvote or downvote questions and answers by clicking on the respective arrows.
+- Search for questions using the search bar at the top of the page.
+- Tag questions with relevant topics to help organize and search for content efficiently.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! If you have any suggestions, feature requests, or bug reports, please open an issue or submit a pull request. Make sure to follow the [code of conduct](CODE_OF_CONDUCT.md).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
